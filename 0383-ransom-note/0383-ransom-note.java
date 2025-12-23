@@ -1,6 +1,5 @@
 class Solution {
     public boolean canConstruct(String ransomNote, String magazine) {
-        boolean status = true;
         Map<Character, Integer> table = new HashMap<>();
         for(int i = 0; i < magazine.length(); i++)
         {
@@ -16,10 +15,9 @@ class Solution {
             }
             else
             {
-                status = true;
                 table.put(c, table.get(c) - 1);
             }
         }
-        return status;
+        return true;
     }
 }
